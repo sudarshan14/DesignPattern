@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.amlavati.tdd'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+       applicationId "com.amlavati.tdd"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    testOptions{
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+
+    implementation platform("androidx.compose:compose-bom:$bom_version")
+    implementation "androidx.core:core-ktx:$core"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_runtime_ktx"
+    implementation "androidx.activity:activity-compose:$activity_compose"
+    implementation "androidx.navigation:navigation-compose:$navigation_compose"
+    implementation "androidx.compose.ui:ui"
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation "androidx.compose.material3:$material3"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_runtime_ktx"
+    implementation "androidx.compose.runtime:runtime-livedata:1.4.1"
+
+    testImplementation 'junit:junit:4.13.2'
+    //mockito
+
+    testImplementation "org.mockito:mockito-core:4.7.0"
+    testImplementation "org.mockito:mockito-inline:4.0.0"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.0.0"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.0-Beta'
+
+    //mock
+    testImplementation "io.mockk:mockk:1.12.4"
+
+    testImplementation "androidx.arch.core:core-testing:2.2.0"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //    Assertion
+    testImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation platform("androidx.compose:compose-bom:$bom_version")
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}
