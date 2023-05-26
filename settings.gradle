@@ -26,4 +26,4 @@ include ':networking'
 include ':moduledemo'
 
 
-include ':mylibrarydemo'
+include ':androidlibrarymodule'

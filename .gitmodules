@@ -1,3 +1,7 @@
 [submodule "moduledemo"]
 	path = moduledemo
 	url = https://github.com/sudarshan14/submoduledemo.git
+
+[submodule "androidlibrarymodule"]
+	path = androidlibrarymodule
+	url = https://github.com/sudarshan14/androidlibrarymodule.git
