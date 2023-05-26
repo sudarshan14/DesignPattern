@@ -23,5 +23,5 @@ include ':photopicker'
 include ':pokedex'
 include ':tdd'
 include ':networking'
-include ':share'
-include ':submoduledemo'
+
+
