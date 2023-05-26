@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/CreationalDesignPattern" />
             <option value="$PROJECT_DIR$/StructuralDesignPatterns" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/moduledemo" />
+            <option value="$PROJECT_DIR$/mylibrarydemo" />
             <option value="$PROJECT_DIR$/networking" />
             <option value="$PROJECT_DIR$/photopicker" />
             <option value="$PROJECT_DIR$/pokedex" />

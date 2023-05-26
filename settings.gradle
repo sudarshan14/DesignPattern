@@ -23,5 +23,7 @@ include ':photopicker'
 include ':pokedex'
 include ':tdd'
 include ':networking'
+include ':moduledemo'
 
 
+include ':mylibrarydemo'
